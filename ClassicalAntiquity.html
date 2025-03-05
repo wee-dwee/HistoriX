@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical Antiquity</title>
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Background Section */
+        .hero {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1710837159248-15cb784bd59e?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            z-index: -1;
+            transition: transform 0.5s ease-out;
+        }
+
+        /* Title */
+        .title {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            font-weight: bold;
+            opacity: 1;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        /* Content that appears after scrolling */
+        .content {
+            position: relative;
+            background: white;
+            color: black;
+            padding: 100px 20px;
+            z-index: 10;
+            margin-top: 100vh;
+            /* So content appears below hero */
+        }
+
+        /* Collage Section */
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .collage img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Aspect ratio variations */
+        .tall {
+            grid-row: span 2;
+        }
+
+        .wide {
+            grid-column: span 2;
+        }
+
+        .large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .medium {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background with Title -->
+    <div class="hero" id="hero"></div>
+    <div class="title" id="title">Classical Antiquity</div>
+
+    <!-- New Content -->
+    <div class="content">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h2><i>The era of ancient civilizations, philosophy, and empires that shaped human history.</i></h2>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <div class="collage">
+            <img src="https://images.unsplash.com/photo-1606941609827-94a2a5363282?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="large"
+                data-aos="fade-right">
+            <img src="https://images.unsplash.com/flagged/photo-1571682927434-70ea1034fd1e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFuY2llbnQlMjByb21lfGVufDB8fDB8fHww" class="wide"
+                data-aos="fade-left">
+            <img src="https://images.unsplash.com/photo-1681403468344-5c3308139077?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="tall"
+                data-aos="fade-up">
+            <img src="https://images.unsplash.com/reserve/unsplash_52d3d6f9853e9_1.JPG?q=80&w=2963&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="large"
+                data-aos="fade-down">
+            <img src="https://images.unsplash.com/photo-1705700585343-551cfa3a0c65?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="large"
+                data-aos="fade-right">
+            <img src="https://images.unsplash.com/photo-1697455621587-1011833b931c?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="wide"
+                data-aos="fade-left">
+        </div>
+
+        <br><br>
+
+        <h2>Major Figures</h2>
+        <div class="figures-container">
+            <div class="figure-card" data-aos="fade-up">
+                <img src="https://www.stoichandbook.co/content/images/size/w600/2025/01/incredaboy_photorealistic_image_of_socrates_on_the_streets_of_a_72a9b917-0d6d-433b-95f3-d5fa14d13a11-1.jpg"
+                    alt="Socrates">
+                <div class="text">
+                    <strong>Socrates</strong> (470–399 BCE) - Greek philosopher known for his Socratic method.
+                    <a href="https://en.wikipedia.org/wiki/Socrates" target="_blank">Read More</a>
+                </div>
+            </div>
+
+            <div class="figure-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRPK9fEe4o550HFnv26HWHR2Xz_JpSwQ1g40BoePS11Tw3BESC2C8ecCZIvV6hxrkExMfXSm3WBi3I7X9cvNpN2hg"
+                    alt="Plato">
+                <div class="text">
+                    <strong>Plato</strong> (428–348 BCE) - Founder of the Academy and author of <em>The Republic</em>.
+                    <a href="https://en.wikipedia.org/wiki/Plato" target="_blank">Read More</a>
+                </div>
+            </div>
+
+            <div class="figure-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRBHf3UTUzapdySh5MrpbuXpO1JUt_ALgHtkeZJ7GeaxDvbnXnVTnHNKYz3VtAenFnIm5qrvCPNmmsu_kKCIfWJtQ"
+                    alt="Aristotle">
+                <div class="text">
+                    <strong>Aristotle</strong> (384–322 BCE) - Philosopher who laid the foundation for Western science.
+                    <a href="https://en.wikipedia.org/wiki/Aristotle" target="_blank">Read More</a>
+                </div>
+            </div>
+
+            <div class="figure-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://cdn.britannica.com/95/121095-050-21005309/Alexander-the-Great-detail-painting-Porus-Charles.jpg"
+                    alt="Alexander the Great">
+                <div class="text">
+                    <strong>Alexander the Great</strong> (356–323 BCE) - King of Macedonia, who created a vast empire.
+                    <a href="https://en.wikipedia.org/wiki/Alexander_the_Great" target="_blank">Read More</a>
+                </div>
+            </div>
+
+            <div class="figure-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="https://cdn.britannica.com/11/196711-050-FA58D50D/Julius-Caesar-marble-sculpture-Andrea-di-Pietro.jpg"
+                    alt="Julius Caesar">
+                <div class="text">
+                    <strong>Julius Caesar</strong> (100–44 BCE) - Roman general and dictator.
+                    <a href="https://en.wikipedia.org/wiki/Julius_Caesar" target="_blank">Read More</a>
+                </div>
+            </div>
+        </div>
+
+
+        <br><br>
+
+        <h2>Timeline of Classical Antiquity</h2>
+<div class="timeline">
+    <div class="timeline-item" data-aos="fade-up">
+        <div class="date">776 BCE</div>
+        <div class="event">First recorded Olympic Games in Greece.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="date">753 BCE</div>
+        <div class="event">Legendary founding of Rome by Romulus.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="date">621 BCE</div>
+        <div class="event">Draco codifies Athenian law, introducing harsh legal punishments.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="date">508 BCE</div>
+        <div class="event">Birth of democracy in Athens under Cleisthenes’ reforms.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+        <div class="date">490 BCE</div>
+        <div class="event">Battle of Marathon: Athenian victory over the Persians.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+        <div class="date">480 BCE</div>
+        <div class="event">Battle of Thermopylae: King Leonidas and 300 Spartans make their stand.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+        <div class="date">479 BCE</div>
+        <div class="event">Battle of Plataea: Greek forces decisively defeat the Persians.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="700">
+        <div class="date">447 BCE</div>
+        <div class="event">Construction of the Parthenon begins in Athens under Pericles.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="800">
+        <div class="date">431 BCE</div>
+        <div class="event">Peloponnesian War begins between Athens and Sparta.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="900">
+        <div class="date">404 BCE</div>
+        <div class="event">Athens surrenders; end of the Peloponnesian War, Spartan dominance begins.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1000">
+        <div class="date">336 BCE</div>
+        <div class="event">Alexander the Great becomes King of Macedon.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1100">
+        <div class="date">323 BCE</div>
+        <div class="event">Death of Alexander the Great; start of the Hellenistic Period.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1200">
+        <div class="date">146 BCE</div>
+        <div class="event">Rome conquers Greece, marking the rise of Roman dominance.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1300">
+        <div class="date">44 BCE</div>
+        <div class="event">Julius Caesar is assassinated on the Ides of March.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1400">
+        <div class="date">27 BCE</div>
+        <div class="event">The Roman Empire is established under Augustus.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1500">
+        <div class="date">64 CE</div>
+        <div class="event">Great Fire of Rome during the reign of Emperor Nero.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1600">
+        <div class="date">79 CE</div>
+        <div class="event">Eruption of Mount Vesuvius destroys Pompeii and Herculaneum.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1700">
+        <div class="date">117 CE</div>
+        <div class="event">Roman Empire reaches its greatest territorial extent under Trajan.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1800">
+        <div class="date">313 CE</div>
+        <div class="event">Emperor Constantine issues the Edict of Milan, legalizing Christianity.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1900">
+        <div class="date">395 CE</div>
+        <div class="event">The Roman Empire is permanently divided into East and West.</div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="2000">
+        <div class="date">476 CE</div>
+        <div class="event">Fall of the Western Roman Empire; end of Classical Antiquity.</div>
+    </div>
+</div>
+
+        <br><br>
+
+        <!-- Read More on Wikipedia Button -->
+        <div class="wiki-link" data-aos="fade-up">
+            <a href="https://en.wikipedia.org/wiki/Classical_antiquity" target="_blank">📖 Read More on Wikipedia</a>
+        </div>
+    </div>
+
+
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        window.onload = function () {
+            AOS.init(); // Initialize AOS properly after DOM is loaded
+
+            window.addEventListener("scroll", function () {
+                let scrollY = window.scrollY;
+                let hero = document.getElementById("hero");
+                let title = document.getElementById("title");
+
+                // Move background up with scrolling
+                hero.style.transform = `translateY(-${scrollY * 0.5}px)`;
+
+                // Move title up with the background
+                title.style.transform = `translate(-50%, calc(-50% - ${scrollY * 0.5}px))`;
+
+                // Fade out title after a certain scroll point
+                if (scrollY > 600) {
+                    title.style.opacity = "0";
+                } else {
+                    title.style.opacity = "1";
+                }
+            });
+        };
+        document.addEventListener("DOMContentLoaded", loadMessages);
+
+        function sendMessage() {
+            let input = document.getElementById("chat-input");
+            let message = input.value.trim();
+            if (message === "") return;
+
+            let chatBox = document.getElementById("chat-box");
+            let newMessage = document.createElement("div");
+            newMessage.classList.add("message");
+            newMessage.textContent = message;
+
+            chatBox.appendChild(newMessage);
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            saveMessage(message);
+            input.value = "";
+        }
+
+        function saveMessage(message) {
+            let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+            messages.push(message);
+            localStorage.setItem("chatMessages", JSON.stringify(messages));
+        }
+
+        function loadMessages() {
+            let chatBox = document.getElementById("chat-box");
+            let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+
+            messages.forEach(message => {
+                let newMessage = document.createElement("div");
+                newMessage.classList.add("message");
+                newMessage.textContent = message;
+                chatBox.appendChild(newMessage);
+            });
+
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+    <style>
+        .chat-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 12px;
+            background: #1e1e1e;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #chat-box {
+            height: 300px;
+            overflow-y: auto;
+            padding: 15px;
+            background: #2a2a2a;
+            border-radius: 8px;
+            border: 1px solid #444;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            background: #0078ff;
+            color: white;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border-radius: 20px;
+            max-width: 80%;
+            align-self: flex-end;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 2px 5px rgba(0, 120, 255, 0.3);
+        }
+
+        .message.user {
+            background: #3a3a3a;
+            align-self: flex-start;
+        }
+
+        #chat-input {
+            width: calc(100% - 70px);
+            padding: 10px;
+            margin-top: 12px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            background: #2a2a2a;
+            color: white;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px;
+            background: #0078ff;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #005ecb;
+        }
+
+        .wiki-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .wiki-link a {
+            display: inline-block;
+            background-color: #000000;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .wiki-link a:hover {
+            opacity: .7;
+            transform: scale(1.05);
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            background-color: #000;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            width: 120%;
+            padding: 20px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .date {
+            font-weight: bold;
+            width: 40%;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .timeline-item:nth-child(odd) .date {
+            text-align: left;
+            padding-right: 0;
+            padding-left: 20px;
+        }
+
+        .event {
+            width: 48%;
+            text-align: left;
+        }
+
+        .timeline-item:nth-child(odd) .event {
+            text-align: right;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+        }
+
+        .figures-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .figure-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .figure-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .figure-card .text {
+            flex: 1;
+            padding: 0 20px;
+            text-align: left;
+        }
+
+        .figure-card a {
+            display: inline-block;
+            margin-top: 5px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .figure-card a:hover {
+            text-decoration: underline;
+        }
+
+        .left {
+            flex-direction: row-reverse;
+        }
+    </style>
+</body>
+
+</html>

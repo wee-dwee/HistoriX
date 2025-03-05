@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HistoriX - Home</title>
+
+    <!-- AOS CSS for animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        /* Background Section */
+        .hero {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: url('https://images.pexels.com/photos/159862/art-school-of-athens-raphael-italian-painter-fresco-159862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+            z-index: -1;
+            transition: transform 0.1s ease-out;
+        }
+
+        /* Title */
+        .title {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            font-weight: bold;
+            opacity: 1;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        /* Content Section */
+        .content {
+            position: relative;
+            background: white;
+            color: black;
+            padding: 100px 20px;
+            z-index: 10;
+            margin-top: 100vh;
+        }
+
+        /* Historical Sections */
+        .era {
+            padding: 50px 20px;
+            background: white;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .era img {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .era h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .era p {
+            max-width: 800px;
+            font-size: 1.2em;
+        }
+
+        /* Links to more details */
+        .era a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            color: white;
+            background: black;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: 0s;
+        }
+
+        .era a:hover {
+            background: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background with Title -->
+    <div class="hero" id="hero"></div>
+    <div class="title" id="title"></div>
+
+    <!-- New Content -->
+    <div class="content"  data-aos="fade-up">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1>Welcome to HistoriX, A Scroll through Time...</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    
+    <!-- Historical Sections -->
+    <div class="era" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1503152394-c571994fd383?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Classical Antiquity">
+        <h2>Classical Antiquity</h2>
+        <p>The era of ancient Greece and Rome, known for philosophy, democracy, and monumental architecture.</p>
+        <a href="ClassicalAntiquity.html">Learn More</a>
+    </div>
+
+    <div class="era" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1575626962900-e5f197b69cb9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWlkZGxlJTIwYWdlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Middle Ages">
+        <h2>Middle Ages</h2>
+        <p>A time of castles, knights, and feudal kingdoms, shaping European history for centuries.</p>
+        <a href="middle-ages.html">Learn More</a>
+    </div>
+
+    <div class="era" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1599894019794-50339c9ad89c?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Renaissance">
+        <h2>Renaissance</h2>
+        <p>A rebirth of art, science, and culture, led by figures like Leonardo da Vinci and Michelangelo.</p>
+        <a href="renaissance.html">Learn More</a>
+    </div>
+
+    <div class="era" data-aos="fade-up">
+        <img src="https://images.aeonmedia.co/images/8f319c9e-01b0-4780-aa67-a9c6e35fe9e1/sized-02-jean-huber-philosophes.jpg?width=3840&quality=75&format=auto" alt="Age of Enlightenment">
+        <h2>Age of Enlightenment</h2>
+        <p>An era of intellectual growth and reason, influencing modern democracy and human rights.</p>
+        <a href="enlightenment.html">Learn More</a>
+    </div>
+
+    <div class="era" data-aos="fade-up">
+        <img src="https://i0.wp.com/militaryhistorynow.com/wp-content/uploads/2016/11/American_troops_going_forward_to_the_battle_line_in_the_Forest_of_Argonne._France_September_26_1918._-_NARA_-_530748.jpg?resize=650%2C447&ssl=1" alt="Modern Era">
+        <h2>Modern Era</h2>
+        <p>The age of technology, globalization, and rapid scientific advancements shaping our future.</p>
+        <a href="modern-era.html">Learn More</a>
+    </div>
+
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        window.onload = function () {
+            AOS.init(); // Initialize AOS properly after DOM is loaded
+
+            window.addEventListener("scroll", function () {
+                let scrollY = window.scrollY;
+                let hero = document.getElementById("hero");
+                let title = document.getElementById("title");
+
+                // Move background up with scrolling
+                hero.style.transform = `translateY(-${scrollY * 0.5}px)`;
+
+                // Move title up with the background
+                title.style.transform = `translate(-50%, calc(-50% - ${scrollY * 0.5}px))`;
+
+                // Fade out title after a certain scroll point
+                if (scrollY > 600) {
+                    title.style.opacity = "0";
+                } else {
+                    title.style.opacity = "1";
+                }
+            });
+        };
+    </script>
+
+</body>
+
+</html>

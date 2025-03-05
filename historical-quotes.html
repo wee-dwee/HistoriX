@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Quotes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hidden-header {
+            transform: translateY(-100%);
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 80px 20px 20px; /* Ensure content is visible below fixed header */
+            text-align: center;
+        }
+
+        .quote-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .quote-image {
+            width: 256px;
+            height: 256px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <h1>💬 Historical Quotes</h1>
+        <p>Words that shaped history</p>
+    </header>
+
+    <main>
+        <br><br><br>
+        <div class="quote-container" data-aos="fade-left">
+            <img src="https://www.dispatch.com/gcdn/authoring/2017/03/14/NCOD/ghows-OH-4a8acddf-fab6-4167-e053-0100007f5e4d-032c504d.jpeg?width=600&height=866&fit=crop&format=pjpg&auto=webp" alt="Franklin D. Roosevelt" class="quote-image">
+            <p class="quote-text">"The only thing we have to fear is fear itself."</p>
+            <p class="quote-author">— Franklin D. Roosevelt</p>
+        </div>
+    
+        <div class="quote-container" data-aos="fade-right">
+            <img src="https://cdn.britannica.com/35/7535-050-06374DF8/Winston-Churchill-Yousuf-Karsh-1941.jpg" alt="Winston Churchill" class="quote-image">
+            <p class="quote-text">"History is written by the victors."</p>
+            <p class="quote-author">— Winston Churchill</p>
+        </div>
+    
+        <div class="quote-container" data-aos="fade-left">
+            <img src="https://collectionimages.npg.org.uk/large/mw84923/Mahatma-Gandhi.jpg" alt="Mahatma Gandhi" class="quote-image">
+            <p class="quote-text">"Be the change that you wish to see in the world."</p>
+            <p class="quote-author">— Mahatma Gandhi</p>
+        </div>
+    
+        <div class="quote-container" data-aos="fade-right">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Albert Einstein" class="quote-image">
+            <p class="quote-text">"Life is like riding a bicycle. To keep your balance, you must keep moving."</p>
+            <p class="quote-author">— Albert Einstein</p>
+        </div>
+    
+        <div class="quote-container" data-aos="fade-left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJW-ZnzQPT9zN5TvyiW7erjWXnDiqd0BoViQ&s" alt="Martin Luther King Jr." class="quote-image">
+            <p class="quote-text">"I have a dream that one day this nation will rise up and live out the true meaning of its creed."</p>
+            <p class="quote-author">— Martin Luther King Jr.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Updated daily with new historical facts!</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+        duration: 1500, // Slower animation
+        easing: "ease-in-out",
+        once: false, // Animation triggers each time it comes into view
+    });
+        let lastScrollY = window.scrollY;
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY) {
+                header.classList.add('hidden-header');
+            } else {
+                header.classList.remove('hidden-header');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
+</body>
+</html>

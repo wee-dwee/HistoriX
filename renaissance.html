@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Renaissance</title>
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Background Section */
+        .hero {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1576016770956-debb63d92058?q=80&w=3126&auto=format&fit=crop') no-repeat center center/cover;
+            z-index: -1;
+            transition: transform 0.5s ease-out;
+        }
+
+        /* Title */
+        .title {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            font-weight: bold;
+            opacity: 1;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        /* Content that appears after scrolling */
+        .content {
+            position: relative;
+            background: white;
+            color: black;
+            padding: 100px 20px;
+            z-index: 10;
+            margin-top: 100vh;
+            /* So content appears below hero */
+        }
+
+        /* Collage Section */
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .collage img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Aspect ratio variations */
+        .tall {
+            grid-row: span 2;
+        }
+
+        .wide {
+            grid-column: span 2;
+        }
+
+        .large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .medium {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background with Title -->
+    <div class="hero" id="hero"></div>
+    <div class="title" id="title">The Renaissance</div>
+
+    <!-- New Content -->
+    <div class="content">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h2><i>The Renaissance was a cultural and intellectual revival from the 14th to 17th century, marked by
+                advancements in art, science, and humanism that shaped the modern world.</i></h2>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="collage">
+            <img src="http://plus.unsplash.com/premium_photo-1661962754715-d081d9ec53a3?q=80&w=3087&auto=format&fit=crop"
+                class="tall" data-aos="fade-right" data-aos-duration="1000">
+
+            <img src="https://plus.unsplash.com/premium_photo-1661964035968-43923ed0b85d?q=80&w=2940&auto=format&fit=crop"
+                class="wide" data-aos="fade-left" data-aos-duration="1000">
+
+            <img src="https://images.unsplash.com/photo-1576503918400-0b982e6a98bf?q=80&w=3173&auto=format&fit=crop"
+                class="medium" data-aos="fade-up" data-aos-duration="1000">
+
+            <img src="https://plus.unsplash.com/premium_photo-1661962827254-d208b6ec327f?q=80&w=2940&auto=format&fit=crop"
+                class="large" data-aos="fade-down" data-aos-duration="1000">
+
+            <img src="https://images.unsplash.com/photo-1625126063811-b98163431cf6?q=80&w=3087&auto=format&fit=crop"
+                class="tall" data-aos="fade-right" data-aos-duration="1000">
+
+            <img src="https://images.unsplash.com/photo-1583119912267-cc97c911e416?q=80&w=2940&auto=format&fit=crop"
+                class="wide" data-aos="fade-left" data-aos-duration="1000">
+
+            <img src="https://images.unsplash.com/photo-1551963423-0632e8a6977b?q=80&w=3061&auto=format&fit=crop"
+                class="medium" data-aos="fade-up" data-aos-duration="1000">
+
+            <img src="https://images.unsplash.com/photo-1601887389937-0b02c26b602c?q=80&w=2523&auto=format&fit=crop"
+                class="large" data-aos="fade-down" data-aos-duration="1000">
+
+            <img src="https://plus.unsplash.com/premium_photo-1661963432390-ef445da3a7b8?q=80&w=3229&auto=format&fit=crop"
+                class="tall" data-aos="fade-right" data-aos-duration="1000">
+        </div>
+        <br><br><br><br><br><br>
+        <h2>Major Figures</h2>
+        <div class="figures-container">
+            <div class="figure-card" data-aos="fade-right">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXwrsO4EBXc3QY5wBNTo4tFoAqVaMLctIN7w&s" alt="Leonardo da Vinci">
+                <div class="text">
+                    <strong>Leonardo da Vinci</strong> (1452–1519)
+                    <p>Painter, scientist, and inventor known for <em>Mona Lisa</em> and <em>The Last Supper</em>.</p>
+                    <a href="https://en.wikipedia.org/wiki/Leonardo_da_Vinci" target="_blank">Read More</a>
+                </div>
+            </div>
+    
+            <div class="figure-card left" data-aos="fade-left">
+                <img src="https://cdn.shopify.com/s/files/1/0849/4704/files/Michelangelo_grande.jpg?v=1585909421" alt="Michelangelo">
+                <div class="text">
+                    <strong>Michelangelo</strong> (1475–1564)
+                    <p>Famous for the Sistine Chapel ceiling and the statue of <em>David</em>.</p>
+                    <a href="https://en.wikipedia.org/wiki/Michelangelo" target="_blank">Read More</a>
+                </div>
+            </div>
+    
+            <div class="figure-card" data-aos="fade-right">
+                <img src="https://smarthistory.org/wp-content/uploads/2020/08/Raffaello_Sanzio-SP-scaled.jpg" alt="Raphael">
+                <div class="text">
+                    <strong>Raphael</strong> (1483–1520)
+                    <p>Renowned for his masterpiece <em>The School of Athens</em>.</p>
+                    <a href="https://en.wikipedia.org/wiki/Raphael_(artist)" target="_blank">Read More</a>
+                </div>
+            </div>
+    
+            <div class="figure-card left" data-aos="fade-left">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Nikolaus_Kopernikus_MOT.jpg/440px-Nikolaus_Kopernikus_MOT.jpg" alt="Copernicus">
+                <div class="text">
+                    <strong>Nicolaus Copernicus</strong> (1473–1543)
+                    <p>Formulated the heliocentric model of the universe.</p>
+                    <a href="https://en.wikipedia.org/wiki/Nicolaus_Copernicus" target="_blank">Read More</a>
+                </div>
+            </div>
+    
+            <div class="figure-card" data-aos="fade-right">
+                <img src="https://cdn.britannica.com/29/18829-050-3F57E4F8/Galileo-Justus-Sustermans-Uffizi-Gallery-Florence-1637.jpg" alt="Galileo">
+                <div class="text">
+                    <strong>Galileo Galilei</strong> (1564–1642)
+                    <p>Physicist and astronomer who improved the telescope.</p>
+                    <a href="https://en.wikipedia.org/wiki/Galileo_Galilei" target="_blank">Read More</a>
+                </div>
+            </div>
+    
+            <div class="figure-card left" data-aos="fade-left">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6CguGhUOqu_0MI6ebsHuzEY3m9iYxS9POtg&s" alt="Shakespeare">
+                <div class="text">
+                    <strong>William Shakespeare</strong> (1564–1616)
+                    <p>Playwright and poet who shaped English literature.</p>
+                    <a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">Read More</a>
+                </div>
+            </div>
+    
+            <div class="figure-card" data-aos="fade-right">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDnILaAKBnBFyppQcUXWwsV43phYnN4lvAXw&s" alt="Gutenberg">
+                <div class="text">
+                    <strong>Johannes Gutenberg</strong> (c. 1400–1468)
+                    <p>Inventor of the printing press.</p>
+                    <a href="https://en.wikipedia.org/wiki/Johannes_Gutenberg" target="_blank">Read More</a>
+                </div>
+            </div>
+    
+            <div class="figure-card left" data-aos="fade-left">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUG3hEUFgS3WXQ2x2CpfKHtWfgmi1IXDJsfg&s" alt="Machiavelli">
+                <div class="text">
+                    <strong>Niccolò Machiavelli</strong> (1469–1527)
+                    <p>Political philosopher, author of <em>The Prince</em>.</p>
+                    <a href="https://en.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli" target="_blank">Read More</a>
+                </div>
+            </div>
+    
+            <div class="figure-card" data-aos="fade-right">
+                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTOiBuELJeUPlPFH-KFzu_8CBld3o6t2ZY_frDrP5oAXuFHFoEh-yZYksOnyhleGt3PUqKE6dsvzLnw0KU" alt="Dürer">
+                <div class="text">
+                    <strong>Albrecht Dürer</strong> (1471–1528)
+                    <p>German painter and printmaker famous for engravings.</p>
+                    <a href="https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer" target="_blank">Read More</a>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+        <h2>Timeline of the Renaissance</h2>
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000">
+                <div class="date">1300s</div>
+                <div class="event">Early Renaissance begins in Italy, marked by developments in art, literature, and
+                    humanism.</div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="date">1439</div>
+                <div class="event">Johannes Gutenberg invents the printing press, revolutionizing the spread of
+                    knowledge.</div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="date">1492</div>
+                <div class="event">Christopher Columbus discovers the Americas, expanding European horizons.</div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="date">1503</div>
+                <div class="event">Leonardo da Vinci paints the <em>Mona Lisa</em>, one of the most famous paintings in
+                    history.</div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="date">1517</div>
+                <div class="event">Martin Luther posts his 95 Theses, sparking the Protestant Reformation.</div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <div class="date">1543</div>
+                <div class="event">Nicolaus Copernicus publishes <em>De revolutionibus orbium coelestium</em>, proposing
+                    the heliocentric model of the universe.</div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <div class="date">1564</div>
+                <div class="event">Birth of William Shakespeare, who would become one of the greatest playwrights of all
+                    time.</div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                <div class="date">1590s</div>
+                <div class="event">Galileo Galilei makes significant advancements in physics and astronomy.</div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                <div class="date">1610</div>
+                <div class="event">Galileo publishes his observations supporting the heliocentric theory.</div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+                <div class="date">1648</div>
+                <div class="event">The Treaty of Westphalia ends the Thirty Years' War, signaling the decline of
+                    Renaissance-era political structures.</div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <!-- Read More on Wikipedia Button -->
+        <div class="wiki-link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <a href="https://en.wikipedia.org/wiki/Renaissance" target="_blank">📖 Read More on Wikipedia</a>
+        </div>
+        <br><br><br><br>
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Your Notes</h2>
+        <div class="chat-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <div id="chat-box"></div>
+            <input type="text" id="chat-input" placeholder="Add your thoughts...">
+            <button onclick="sendMessage()">Add</button>
+        </div>
+    </div>
+
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        window.onload = function () {
+            AOS.init(); // Initialize AOS properly after DOM is loaded
+
+            window.addEventListener("scroll", function () {
+                let scrollY = window.scrollY;
+                let hero = document.getElementById("hero");
+                let title = document.getElementById("title");
+
+                // Move background up with scrolling
+                hero.style.transform = `translateY(-${scrollY * 0.5}px)`;
+
+                // Move title up with the background
+                title.style.transform = `translate(-50%, calc(-50% - ${scrollY * 0.5}px))`;
+
+                // Fade out title after a certain scroll point
+                if (scrollY > 600) {
+                    title.style.opacity = "0";
+                } else {
+                    title.style.opacity = "1";
+                }
+            });
+        };
+        document.addEventListener("DOMContentLoaded", loadMessages);
+
+        function sendMessage() {
+            let input = document.getElementById("chat-input");
+            let message = input.value.trim();
+            if (message === "") return;
+
+            let chatBox = document.getElementById("chat-box");
+            let newMessage = document.createElement("div");
+            newMessage.classList.add("message");
+            newMessage.textContent = message;
+
+            chatBox.appendChild(newMessage);
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            saveMessage(message);
+            input.value = "";
+        }
+
+        function saveMessage(message) {
+            let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+            messages.push(message);
+            localStorage.setItem("chatMessages", JSON.stringify(messages));
+        }
+
+        function loadMessages() {
+            let chatBox = document.getElementById("chat-box");
+            let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+
+            messages.forEach(message => {
+                let newMessage = document.createElement("div");
+                newMessage.classList.add("message");
+                newMessage.textContent = message;
+                chatBox.appendChild(newMessage);
+            });
+
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+    <style>
+        .chat-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 12px;
+            background: #1e1e1e;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #chat-box {
+            height: 300px;
+            overflow-y: auto;
+            padding: 15px;
+            background: #2a2a2a;
+            border-radius: 8px;
+            border: 1px solid #444;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            background: #0078ff;
+            color: white;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border-radius: 20px;
+            max-width: 80%;
+            align-self: flex-end;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 2px 5px rgba(0, 120, 255, 0.3);
+        }
+
+        .message.user {
+            background: #3a3a3a;
+            align-self: flex-start;
+        }
+
+        #chat-input {
+            width: calc(100% - 70px);
+            padding: 10px;
+            margin-top: 12px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            background: #2a2a2a;
+            color: white;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px;
+            background: #0078ff;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #005ecb;
+        }
+
+        .wiki-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .wiki-link a {
+            display: inline-block;
+            background-color: #000000;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .wiki-link a:hover {
+            opacity: .7;
+            transform: scale(1.05);
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            background-color: #000;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            width: 120%;
+            padding: 20px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .date {
+            font-weight: bold;
+            width: 40%;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .timeline-item:nth-child(odd) .date {
+            text-align: left;
+            padding-right: 0;
+            padding-left: 20px;
+        }
+
+        .event {
+            width: 48%;
+            text-align: left;
+        }
+
+        .timeline-item:nth-child(odd) .event {
+            text-align: right;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+        }
+
+        .figures-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .figure-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .figure-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .figure-card .text {
+            flex: 1;
+            padding: 0 20px;
+            text-align: left;
+        }
+
+        .figure-card a {
+            display: inline-block;
+            margin-top: 5px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .figure-card a:hover {
+            text-decoration: underline;
+        }
+
+        .left {
+            flex-direction: row-reverse;
+        }
+    </style>
+</body>
+
+</html>
