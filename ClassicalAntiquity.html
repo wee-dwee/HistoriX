@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classical Antiquity</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -103,26 +108,63 @@
     <div class="content">
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <h2><i>The era of ancient civilizations, philosophy, and empires that shaped human history.</i></h2>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="counter-container">
+            <div class="counter-item">
+                <h3><span class="counter" data-target="2000">0</span>+ Years of History</h3>
+            </div>
+            <div class="counter-item">
+                <h3><span class="counter" data-target="100">0</span>+ Legendary Battles</h3>
+            </div>
+            <div class="counter-item">
+                <h3><span class="counter" data-target="50">0</span>+ Ancient Wonders</h3>
+            </div>
+        </div>
 
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <div class="collage">
-            <img src="https://images.unsplash.com/photo-1606941609827-94a2a5363282?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="large"
-                data-aos="fade-right">
-            <img src="https://images.unsplash.com/flagged/photo-1571682927434-70ea1034fd1e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFuY2llbnQlMjByb21lfGVufDB8fDB8fHww" class="wide"
-                data-aos="fade-left">
-            <img src="https://images.unsplash.com/photo-1681403468344-5c3308139077?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="tall"
-                data-aos="fade-up">
-            <img src="https://images.unsplash.com/reserve/unsplash_52d3d6f9853e9_1.JPG?q=80&w=2963&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="large"
-                data-aos="fade-down">
-            <img src="https://images.unsplash.com/photo-1705700585343-551cfa3a0c65?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="large"
-                data-aos="fade-right">
-            <img src="https://images.unsplash.com/photo-1697455621587-1011833b931c?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="wide"
-                data-aos="fade-left">
+            <img src="https://images.unsplash.com/photo-1606941609827-94a2a5363282?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="large" data-aos="fade-right">
+            <img src="https://images.unsplash.com/flagged/photo-1571682927434-70ea1034fd1e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFuY2llbnQlMjByb21lfGVufDB8fDB8fHww"
+                class="wide" data-aos="fade-left">
+            <img src="https://images.unsplash.com/photo-1681403468344-5c3308139077?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="tall" data-aos="fade-up">
+            <img src="https://images.unsplash.com/reserve/unsplash_52d3d6f9853e9_1.JPG?q=80&w=2963&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="large" data-aos="fade-down">
+            <img src="https://images.unsplash.com/photo-1705700585343-551cfa3a0c65?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="large" data-aos="fade-right">
+            <img src="https://images.unsplash.com/photo-1697455621587-1011833b931c?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="wide" data-aos="fade-left">
         </div>
 
         <br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div data-aos="fade-up">
+            <h2>Architectural Wonders of the Ancient World</h2>
+            <p>The ancient world was home to awe-inspiring structures that showcased engineering brilliance and artistic
+                grandeur.</p>
 
+            <h3>The Parthenon (Greece)</h3>
+            <p>Built in 447 BC in Athens, the Parthenon was dedicated to Athena. It represents the peak of Doric
+                architecture and remains a symbol of ancient Greek culture.</p>
+
+            <h3>The Colosseum (Rome)</h3>
+            <p>A massive amphitheater in Rome, built in AD 80, the Colosseum was a center for gladiatorial combat and
+                public entertainment, hosting thousands of spectators.</p>
+
+            <h3>The Pyramids of Egypt</h3>
+            <p>Constructed as tombs for the pharaohs, the Great Pyramid of Giza (c. 2580 BC) is one of the most
+                mysterious and magnificent structures ever built, showcasing the advanced engineering skills of the
+                Egyptians.</p>
+
+            <h3>The Hanging Gardens of Babylon</h3>
+            <p>Believed to have been built by King Nebuchadnezzar II, the Hanging Gardens of Babylon were one of the
+                Seven Wonders of the Ancient World, featuring lush, terraced gardens that amazed visitors.</p>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <h2>Major Figures</h2>
         <div class="figures-container">
             <div class="figure-card" data-aos="fade-up">
@@ -172,121 +214,183 @@
         </div>
 
 
-        <br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <h2>Timeline of Classical Antiquity</h2>
-<div class="timeline">
-    <div class="timeline-item" data-aos="fade-up">
-        <div class="date">776 BCE</div>
-        <div class="event">First recorded Olympic Games in Greece.</div>
-    </div>
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-up">
+                <div class="date">776 BCE</div>
+                <div class="event">First recorded Olympic Games in Greece.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-        <div class="date">753 BCE</div>
-        <div class="event">Legendary founding of Rome by Romulus.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="date">753 BCE</div>
+                <div class="event">Legendary founding of Rome by Romulus.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-        <div class="date">621 BCE</div>
-        <div class="event">Draco codifies Athenian law, introducing harsh legal punishments.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="date">621 BCE</div>
+                <div class="event">Draco codifies Athenian law, introducing harsh legal punishments.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-        <div class="date">508 BCE</div>
-        <div class="event">Birth of democracy in Athens under Cleisthenes’ reforms.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="date">508 BCE</div>
+                <div class="event">Birth of democracy in Athens under Cleisthenes’ reforms.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
-        <div class="date">490 BCE</div>
-        <div class="event">Battle of Marathon: Athenian victory over the Persians.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="date">490 BCE</div>
+                <div class="event">Battle of Marathon: Athenian victory over the Persians.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
-        <div class="date">480 BCE</div>
-        <div class="event">Battle of Thermopylae: King Leonidas and 300 Spartans make their stand.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="date">480 BCE</div>
+                <div class="event">Battle of Thermopylae: King Leonidas and 300 Spartans make their stand.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
-        <div class="date">479 BCE</div>
-        <div class="event">Battle of Plataea: Greek forces decisively defeat the Persians.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+                <div class="date">479 BCE</div>
+                <div class="event">Battle of Plataea: Greek forces decisively defeat the Persians.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="700">
-        <div class="date">447 BCE</div>
-        <div class="event">Construction of the Parthenon begins in Athens under Pericles.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="700">
+                <div class="date">447 BCE</div>
+                <div class="event">Construction of the Parthenon begins in Athens under Pericles.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="800">
-        <div class="date">431 BCE</div>
-        <div class="event">Peloponnesian War begins between Athens and Sparta.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="800">
+                <div class="date">431 BCE</div>
+                <div class="event">Peloponnesian War begins between Athens and Sparta.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="900">
-        <div class="date">404 BCE</div>
-        <div class="event">Athens surrenders; end of the Peloponnesian War, Spartan dominance begins.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="900">
+                <div class="date">404 BCE</div>
+                <div class="event">Athens surrenders; end of the Peloponnesian War, Spartan dominance begins.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1000">
-        <div class="date">336 BCE</div>
-        <div class="event">Alexander the Great becomes King of Macedon.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="1000">
+                <div class="date">336 BCE</div>
+                <div class="event">Alexander the Great becomes King of Macedon.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1100">
-        <div class="date">323 BCE</div>
-        <div class="event">Death of Alexander the Great; start of the Hellenistic Period.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="1100">
+                <div class="date">323 BCE</div>
+                <div class="event">Death of Alexander the Great; start of the Hellenistic Period.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1200">
-        <div class="date">146 BCE</div>
-        <div class="event">Rome conquers Greece, marking the rise of Roman dominance.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="1200">
+                <div class="date">146 BCE</div>
+                <div class="event">Rome conquers Greece, marking the rise of Roman dominance.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1300">
-        <div class="date">44 BCE</div>
-        <div class="event">Julius Caesar is assassinated on the Ides of March.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="1300">
+                <div class="date">44 BCE</div>
+                <div class="event">Julius Caesar is assassinated on the Ides of March.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1400">
-        <div class="date">27 BCE</div>
-        <div class="event">The Roman Empire is established under Augustus.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="1400">
+                <div class="date">27 BCE</div>
+                <div class="event">The Roman Empire is established under Augustus.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1500">
-        <div class="date">64 CE</div>
-        <div class="event">Great Fire of Rome during the reign of Emperor Nero.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="1500">
+                <div class="date">64 CE</div>
+                <div class="event">Great Fire of Rome during the reign of Emperor Nero.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1600">
-        <div class="date">79 CE</div>
-        <div class="event">Eruption of Mount Vesuvius destroys Pompeii and Herculaneum.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="1600">
+                <div class="date">79 CE</div>
+                <div class="event">Eruption of Mount Vesuvius destroys Pompeii and Herculaneum.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1700">
-        <div class="date">117 CE</div>
-        <div class="event">Roman Empire reaches its greatest territorial extent under Trajan.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="1700">
+                <div class="date">117 CE</div>
+                <div class="event">Roman Empire reaches its greatest territorial extent under Trajan.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1800">
-        <div class="date">313 CE</div>
-        <div class="event">Emperor Constantine issues the Edict of Milan, legalizing Christianity.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="1800">
+                <div class="date">313 CE</div>
+                <div class="event">Emperor Constantine issues the Edict of Milan, legalizing Christianity.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="1900">
-        <div class="date">395 CE</div>
-        <div class="event">The Roman Empire is permanently divided into East and West.</div>
-    </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="1900">
+                <div class="date">395 CE</div>
+                <div class="event">The Roman Empire is permanently divided into East and West.</div>
+            </div>
 
-    <div class="timeline-item" data-aos="fade-up" data-aos-delay="2000">
-        <div class="date">476 CE</div>
-        <div class="event">Fall of the Western Roman Empire; end of Classical Antiquity.</div>
-    </div>
-</div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="2000">
+                <div class="date">476 CE</div>
+                <div class="event">Fall of the Western Roman Empire; end of Classical Antiquity.</div>
+            </div>
+        </div>
 
+
+        <br><br><br><br><br><br>
+        <div class="mythology-section" data-aos="fade-up">
+            <h2>Mythology: Greek and Roman Legends</h2>
+            <p>Ancient mythology played a vital role in shaping culture, religion, and storytelling. Both Greek and
+                Roman
+                myths revolved around powerful gods, legendary heroes, and epic tales of love, war, and fate.</p>
+
+            <h3>Major Gods and Their Roles</h3>
+            <p><b>Zeus (Jupiter)</b> was the King of the gods and ruler of Mount Olympus. <b>Poseidon (Neptune)</b>
+                ruled
+                over the sea, earthquakes, and horses. <b>Athena (Minerva)</b> was the goddess of wisdom, war, and
+                strategy,
+                while <b>Apollo</b> represented music, prophecy, and the sun. <b>Aphrodite (Venus)</b> symbolized love
+                and
+                beauty, and <b>Hades (Pluto)</b> was the ruler of the underworld.</p>
+
+            <br>
+
+            <h3>Famous Myths & Heroes</h3>
+            <p>One of the most well-known myths is <b>The Trojan War</b>, a great battle between Troy and Greece,
+                featuring
+                Achilles and the legendary Trojan Horse. Another is <b>The Twelve Labors of Hercules</b>, a series of
+                nearly
+                impossible tasks undertaken to prove strength and valor. <b>The Odyssey of Odysseus</b> tells the
+                incredible
+                journey of Odysseus back to Ithaca after the Trojan War. Additionally, <b>Romulus and Remus</b> is the
+                story
+                of Rome’s legendary founders, who were raised by a she-wolf.</p>
+
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+        <div data-aos="fade-up" class="warfare-section">
+            <h2>Weapons & Warfare in the Ancient World</h2>
+            <p>Warfare played a crucial role in shaping civilizations, with each empire developing unique military
+                strategies and weapons.</p>
+
+            <h3>Weapons Used in Ancient Battles</h3>
+            <p>The <b>Gladius</b> was a short sword used by Roman soldiers for close combat. Greek hoplites used the
+                <b>Phalanx Spear</b> in tight formations to strengthen their defense. The Egyptians, Assyrians, and
+                Persians
+                employed <b>War Chariots</b> for fast and powerful attacks on the battlefield. The Romans also used the
+                <b>Ballista</b>, a giant crossbow designed to launch massive projectiles over long distances.
+            </p>
+
+            <h3>Famous Battles</h3>
+            <p>The <b>Battle of Thermopylae (480 BC)</b> was a heroic stand where 300 Spartans faced the vast Persian
+                army.
+                <b>The Battle of Gaugamela (331 BC)</b> marked Alexander the Great’s decisive victory over Persia.
+                <b>The
+                    Battle of Cannae (216 BC)</b> was one of history’s greatest tactical maneuvers, executed by Hannibal
+                against Rome. Finally, the <b>Siege of Troy</b>, immortalized in Homer’s *Iliad*, remains one of the
+                most
+                famous conflicts in ancient mythology.
+            </p>
+        </div>
         <br><br>
-
+        <br><br><br><br>
+        <h2 data-aos="fade-up">Major Sites of Classical Antiquity</h2>
+        <div id="map" data-aos="fade-up"></div>
         <!-- Read More on Wikipedia Button -->
         <div class="wiki-link" data-aos="fade-up">
             <a href="https://en.wikipedia.org/wiki/Classical_antiquity" target="_blank">📖 Read More on Wikipedia</a>
+        </div>
+        <div class="wiki-link" data-aos="fade-up">
+            <a href="/index.html" target="_blank">Home</a>
         </div>
     </div>
 
@@ -354,6 +458,93 @@
 
             chatBox.scrollTop = chatBox.scrollHeight;
         }
+        document.addEventListener("DOMContentLoaded", function () {
+            var map = L.map('map').setView([41.9028, 12.4964], 4); // Centered on Rome
+
+            // Add Tile Layer (Map Background)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            // Add Markers for Key Locations
+            var locations = [
+                // Existing locations
+                { name: "Athens, Greece", coords: [37.9838, 23.7275], info: "Birthplace of Democracy and Philosophy." },
+                { name: "Rome, Italy", coords: [41.9028, 12.4964], info: "Heart of the Roman Empire." },
+                { name: "Alexandria, Egypt", coords: [31.2001, 29.9187], info: "Famous for the Great Library." },
+                { name: "Sparta, Greece", coords: [37.0815, 22.4231], info: "Known for its warrior society." },
+                { name: "Carthage, Tunisia", coords: [36.8528, 10.3231], info: "Major power in the Punic Wars against Rome." },
+
+                // Famous Battles
+                { name: "Battle of Thermopylae", coords: [38.7972, 22.5325], info: "Spartans vs. Persians in 480 BC." },
+                { name: "Battle of Marathon", coords: [38.1167, 23.9833], info: "Athenian victory over Persia in 490 BC." },
+                { name: "Battle of Salamis", coords: [37.9555, 23.5303], info: "Naval battle where Greeks defeated Persia in 480 BC." },
+                { name: "Battle of Plataea", coords: [38.2081, 23.2667], info: "Final Greek victory over Persia in 479 BC." },
+                { name: "Battle of Gaugamela", coords: [36.3614, 43.1224], info: "Alexander the Great’s decisive victory over Persia in 331 BC." },
+                { name: "Battle of Issus", coords: [36.5833, 36.1667], info: "Alexander’s second major victory against Persia in 333 BC." },
+                { name: "Battle of Cannae", coords: [41.3494, 16.0586], info: "Hannibal’s greatest victory against Rome in 216 BC." },
+                { name: "Battle of Zama", coords: [36.2800, 9.8500], info: "Rome’s victory over Carthage, ending the Second Punic War in 202 BC." },
+                { name: "Battle of Actium", coords: [38.9333, 20.7500], info: "Naval battle where Octavian defeated Mark Antony & Cleopatra in 31 BC." },
+
+                // Significant Events
+                { name: "Founding of Rome", coords: [41.9028, 12.4964], info: "Traditionally dated to 753 BC by Romulus and Remus." },
+                { name: "Destruction of Carthage", coords: [36.8528, 10.3231], info: "Rome completely destroyed Carthage in 146 BC." },
+                { name: "Eruption of Mount Vesuvius", coords: [40.8224, 14.4289], info: "Buried Pompeii and Herculaneum in 79 AD." },
+                { name: "Sack of Rome", coords: [41.9028, 12.4964], info: "Visigoths led by Alaric sacked Rome in 410 AD." },
+
+                // Architectural Wonders
+                { name: "Parthenon, Athens", coords: [37.9715, 23.7262], info: "Temple of Athena, built in 447 BC." },
+                { name: "Colosseum, Rome", coords: [41.8902, 12.4922], info: "Gladiatorial arena built in AD 80." },
+                { name: "Great Pyramid of Giza", coords: [29.9792, 31.1342], info: "Oldest and largest pyramid built around 2580 BC." },
+                { name: "Hanging Gardens of Babylon", coords: [32.5400, 44.4200], info: "One of the Seven Wonders of the Ancient World." }
+            ];
+
+            locations.forEach(function (loc) {
+                L.marker(loc.coords)
+                    .addTo(map)
+                    .bindPopup(`<b>${loc.name}</b><br>${loc.info}`);
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll(".counter");
+
+            function animateCounters() {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute("data-target");
+                    let count = 0;
+                    const increment = target / 100;
+
+                    function updateCounter() {
+                        if (count < target) {
+                            count += increment;
+                            counter.textContent = Math.ceil(count);
+                            setTimeout(updateCounter, 20);
+                        } else {
+                            counter.textContent = target; // Ensure it stops at the exact value
+                        }
+                    }
+
+                    updateCounter();
+                });
+            }
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return rect.top < window.innerHeight && rect.bottom >= 0;
+            }
+
+            function checkScroll() {
+                counters.forEach(counter => {
+                    if (isElementInViewport(counter) && !counter.classList.contains("animated")) {
+                        counter.classList.add("animated");
+                        animateCounters();
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", checkScroll);
+            checkScroll(); // Run on page load if already visible
+        });
     </script>
     <style>
         .chat-container {
@@ -568,6 +759,130 @@
 
         .left {
             flex-direction: row-reverse;
+        }
+
+        /* Map container */
+        #map {
+            height: 500px;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .mythology-section,
+        .warfare-section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .mythology-section:hover,
+        .warfare-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Heading Styles */
+        .mythology-section h2,
+        .warfare-section h2 {
+            font-size: 2rem;
+            text-align: center;
+            color: #8b0000;
+            border-bottom: 3px solid #8b0000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .mythology-section h3,
+        .warfare-section h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-top: 20px;
+            border-left: 5px solid #8b0000;
+            padding-left: 15px;
+        }
+
+        /* Paragraphs & Text Styling */
+        .mythology-section p,
+        .warfare-section p {
+            font-size: 1.1rem;
+            color: #444;
+            text-align: justify;
+        }
+
+        /* Bold Text Enhancements */
+        .mythology-section p b,
+        .warfare-section p b {
+            color: #8b0000;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+
+            .mythology-section,
+            .warfare-section {
+                padding: 30px;
+                max-width: 90%;
+            }
+
+            .mythology-section h2,
+            .warfare-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .mythology-section h3,
+            .warfare-section h3 {
+                font-size: 1.3rem;
+            }
+
+            .mythology-section p,
+            .warfare-section p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Counter Container */
+        .counter-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        /* Individual Counter Item */
+        .counter-item {
+            background: #000000;
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .counter-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .counter-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .counter-item {
+                font-size: 1.2rem;
+                padding: 10px 20px;
+            }
         }
     </style>
 </body>

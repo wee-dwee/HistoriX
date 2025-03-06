@@ -104,6 +104,33 @@
         .era a:hover {
             background: gray;
         }
+
+.preview-container {
+        display: none;
+        position: absolute;
+        bottom: 200px; /* Position above the link */
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        padding: 2px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        width: 400px;
+        height: 280px;
+        overflow: hidden;
+        z-index: 10;
+    }
+
+    .preview-container object {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .era {
+        position: relative; /* Needed for absolute positioning of the preview */
+    }
+
     </style>
 </head>
 
@@ -114,43 +141,51 @@
     <div class="title" id="title"></div>
 
     <!-- New Content -->
-    <div class="content"  data-aos="fade-up">
+    <div class="content" data-aos="fade-up">
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <h1>Welcome to HistoriX, A Scroll through Time...</h1>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
-    
+
     <!-- Historical Sections -->
     <div class="era" data-aos="fade-up">
-        <img src="https://images.unsplash.com/photo-1503152394-c571994fd383?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Classical Antiquity">
+        <img src="https://images.unsplash.com/photo-1503152394-c571994fd383?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Classical Antiquity">
         <h2>Classical Antiquity</h2>
         <p>The era of ancient Greece and Rome, known for philosophy, democracy, and monumental architecture.</p>
-        <a href="ClassicalAntiquity.html">Learn More</a>
+        <a href="ClassicalAntiquity.html" class="learn-more" data-page="ClassicalAntiquity.html">Learn More</a>
+        <div class="preview-container"></div>
     </div>
 
     <div class="era" data-aos="fade-up">
-        <img src="https://images.unsplash.com/photo-1575626962900-e5f197b69cb9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWlkZGxlJTIwYWdlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Middle Ages">
+        <img src="https://images.unsplash.com/photo-1575626962900-e5f197b69cb9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWlkZGxlJTIwYWdlc3xlbnwwfHwwfHx8MA%3D%3D"
+            alt="Middle Ages">
         <h2>Middle Ages</h2>
         <p>A time of castles, knights, and feudal kingdoms, shaping European history for centuries.</p>
-        <a href="middle-ages.html">Learn More</a>
+        <a href="middle-ages.html" class="learn-more" data-page="middle-ages.html">Learn More</a>
+    <div class="preview-container"></div>
     </div>
 
     <div class="era" data-aos="fade-up">
-        <img src="https://images.unsplash.com/photo-1599894019794-50339c9ad89c?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Renaissance">
+        <img src="https://images.unsplash.com/photo-1599894019794-50339c9ad89c?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Renaissance">
         <h2>Renaissance</h2>
         <p>A rebirth of art, science, and culture, led by figures like Leonardo da Vinci and Michelangelo.</p>
-        <a href="renaissance.html">Learn More</a>
+        <a href="renaissance.html" class="learn-more" data-page="renaissance.html">Learn More</a>
+    <div class="preview-container"></div>
     </div>
 
     <div class="era" data-aos="fade-up">
-        <img src="https://images.aeonmedia.co/images/8f319c9e-01b0-4780-aa67-a9c6e35fe9e1/sized-02-jean-huber-philosophes.jpg?width=3840&quality=75&format=auto" alt="Age of Enlightenment">
+        <img src="https://images.aeonmedia.co/images/8f319c9e-01b0-4780-aa67-a9c6e35fe9e1/sized-02-jean-huber-philosophes.jpg?width=3840&quality=75&format=auto"
+            alt="Age of Enlightenment">
         <h2>Age of Enlightenment</h2>
         <p>An era of intellectual growth and reason, influencing modern democracy and human rights.</p>
         <a href="enlightenment.html">Learn More</a>
     </div>
 
     <div class="era" data-aos="fade-up">
-        <img src="https://i0.wp.com/militaryhistorynow.com/wp-content/uploads/2016/11/American_troops_going_forward_to_the_battle_line_in_the_Forest_of_Argonne._France_September_26_1918._-_NARA_-_530748.jpg?resize=650%2C447&ssl=1" alt="Modern Era">
+        <img src="https://i0.wp.com/militaryhistorynow.com/wp-content/uploads/2016/11/American_troops_going_forward_to_the_battle_line_in_the_Forest_of_Argonne._France_September_26_1918._-_NARA_-_530748.jpg?resize=650%2C447&ssl=1"
+            alt="Modern Era">
         <h2>Modern Era</h2>
         <p>The age of technology, globalization, and rapid scientific advancements shaping our future.</p>
         <a href="modern-era.html">Learn More</a>
@@ -181,11 +216,42 @@
                 }
             });
         };
+        document.querySelectorAll('.learn-more').forEach(link => {
+        link.addEventListener('mouseover', function () {
+            let preview = this.nextElementSibling;
+            let page = this.getAttribute('data-page');
+
+            if (!preview.innerHTML.trim()) {
+                preview.innerHTML = `<object type="text/html" data="${page}"></object>`;
+            }
+            preview.style.display = "block";
+
+            // Wait for object to load, then start scrolling
+            setTimeout(() => {
+                let obj = preview.querySelector("object");
+                if (obj) {
+                    let scrollInterval = setInterval(() => {
+                        if (obj.contentDocument) {
+                            obj.contentDocument.documentElement.scrollTop += 10;
+                        }
+                    }, 50);
+
+                    // Stop scrolling when mouse leaves
+                    preview.addEventListener("mouseout", () => {
+                        clearInterval(scrollInterval);
+                        preview.style.display = "none";
+                    });
+                }
+            }, 500);
+        });
+
+        link.addEventListener('mouseout', function () {
+            let preview = this.nextElementSibling;
+            preview.style.display = "none";
+        });
+    });
     </script>
 
 </body>
 
 </html>
-
-
-
